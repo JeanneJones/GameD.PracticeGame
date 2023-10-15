@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/custom/Scenes/Opening.unity
     guid: 4fc18eb995519d0458d059de80763c66
   - enabled: 1
+    path: Assets/custom/Scenes/Intro.unity
+    guid: e02fdec6ff52f924ab352b1b8feab06f
+  - enabled: 1
     path: Assets/custom/Scenes/SpookyForest.unity
     guid: af7b8fe6de10c17468bf3ff33a8e93ce
   m_configObjects: {}

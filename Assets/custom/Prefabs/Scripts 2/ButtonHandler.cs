@@ -5,20 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum SceneToLoad
     {
-        
+        Intro,
+        SpookyForest,
+        Opening,
+        // Add more scenes here if needed
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public SceneToLoad targetScene;
 
     public void changeScenes()
     {
-        SceneManager.LoadScene("SpookyForest");
+        string sceneName = targetScene.ToString();
+        SceneManager.LoadScene(sceneName);
     }
 }

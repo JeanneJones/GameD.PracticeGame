@@ -10,6 +10,7 @@ TagManager:
   - NPC
   - TextPop
   - Object
+  - Next
   layers:
   - Default
   - TransparentFX
