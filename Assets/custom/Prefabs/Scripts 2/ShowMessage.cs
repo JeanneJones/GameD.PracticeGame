@@ -12,6 +12,7 @@ public class ShowMessage : MonoBehaviour
     private bool isColliding1 = false;
     private bool isColliding2 = false;
     private bool candleGiven = false; // Added variable to track candle given
+    private bool RedFlowerPickup2 = false;
 
     private void Start()
     {
@@ -63,7 +64,21 @@ public class ShowMessage : MonoBehaviour
                 textPopB.enabled = true; // Show "TextPop.b"
                 textPopB.text = "Thank you! Your reward is a hint: Behind the forest's curtain, a secret to unwind, Two to the right, a red bloom you'll find.";
             }
+
+            if (RedFlowerPickup2)   // Check if the RedFlower has been picked up
+            {
+
+                textPop2.enabled = false;
+                textpop2B.enabled = true;
+                textpop2B.text = "You found one! Thank you. Now I can happily rest";
+
+            }
+
+
+
         }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -83,5 +98,9 @@ public class ShowMessage : MonoBehaviour
             candleGiven = true;
         }
 
+        if (col.gameObject.tag == "Pickup2") // Object called RedFlower
+        {
+            RedFlowerPickup2 = true;
+        }
     }
 }
