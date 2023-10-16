@@ -18,7 +18,7 @@ public class ShowMessage : MonoBehaviour
         // Disable the text at the start
         textPop.enabled = false;
         textPop2.enabled = false;
-        textPopB.enabled = false; // Disable "TextPop.b" at the start
+        textPopB.enabled = false; // Disable "TextPopB" at the start
         textpop2B.enabled = false;
     }
 
