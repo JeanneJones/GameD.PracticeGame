@@ -27,37 +27,38 @@ public class LetterByLetterText : MonoBehaviour
     {
         int initialPauseFrames = Mathf.CeilToInt(initialPause / Time.deltaTime);
         int dots = 3;
-        bool dialogPlaying = false;
+
+        // Track the position within the text
+        int textPosition = 0;
 
         for (int i = 0; i < fullText.Length; i++)
         {
             if (i == 9)
             {
-                if (dialogPlaying)
-                {
-                    dialogAudio.Stop(); // Pause the dialog sound
-                    dialogPlaying = true;
-                }
+                // Pause the audio and text simultaneously
+                dialogAudio.Pause();
                 yield return new WaitForSeconds(initialPause);
+                dialogAudio.UnPause();
             }
             else if (i >= 10 && i < 11)
             {
                 currentText += ".";
                 textComponent.text = currentText;
                 dots++;
-
-                if (!dialogPlaying)
-                {
-                    dialogAudio.Play(); // Resume playing the dialog sound
-                    dialogPlaying = false;
-                }
-
                 yield return new WaitForSeconds(letterDelay);
             }
             else
             {
                 currentText += fullText[i];
                 textComponent.text = currentText;
+                textPosition++;
+
+                if (textPosition == 9)
+                {
+                    // Pause the audio when the text pauses
+                    dialogAudio.Pause();
+                }
+
                 yield return new WaitForSeconds(letterDelay);
             }
         }

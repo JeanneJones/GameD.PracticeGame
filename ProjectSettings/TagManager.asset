@@ -11,6 +11,14 @@ TagManager:
   - TextPop
   - Object
   - Next
+  - TextPop2
+  - NPC2
+  - Pumpkin
+  - TextPopB
+  - RedFlower
+  - TextPop.b
+  - PickupHold
+  - TextPop2B
   layers:
   - Default
   - TransparentFX

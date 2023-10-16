@@ -14,11 +14,12 @@ GameObject:
   - component: {fileID: 9050248901283945228}
   - component: {fileID: 6549490483968073706}
   - component: {fileID: 5052548956458389301}
-  - component: {fileID: 7409293817907102407}
+  - component: {fileID: 2306284927008173929}
+  - component: {fileID: 1204738388111778295}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -201,8 +202,8 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
---- !u!114 &7409293817907102407
+    m_Bits: 4294967295
+--- !u!114 &2306284927008173929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,9 +212,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1472445109037023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b03acc2007f5c4514b4a2047949905e5, type: 3}
+  m_Script: {fileID: 11500000, guid: da5a33f4029c22640824122db89e3457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPop: {fileID: 0}
+  textPop2: {fileID: 0}
+  textPopB: {fileID: 0}
+--- !u!114 &1204738388111778295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472445109037023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4858f37079fe5d647a49dab06f32d568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickupKey: 101
-  dropKey: 0
-  pickUpDistance: 2
+  dropKey: 101
+  pickUpDistance: 1.5

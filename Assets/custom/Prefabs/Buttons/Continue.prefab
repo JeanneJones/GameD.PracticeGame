@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2169516151615137260}
   - component: {fileID: 562648766204266375}
   m_Layer: 5
-  m_Name: Continue ___
+  m_Name: Continue
   m_TagString: Next
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
