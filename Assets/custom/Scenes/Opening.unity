@@ -694,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_FadeDuration
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -710,15 +710,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
-      value: 0.5977661
+      value: 0.4575472
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_PressedColor.g
-      value: 0.9050576
+      value: 0.92846775
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_PressedColor.r
-      value: 0.9528302
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_ColorMultiplier
@@ -754,15 +754,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.8113208
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.70225173
+      value: 0.8466981
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.5931827
+      value: 0.6933962
       objectReference: {fileID: 0}
     - target: {fileID: 4308768218262326822, guid: 1a7bc45d437b17744a37c86554103a7e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

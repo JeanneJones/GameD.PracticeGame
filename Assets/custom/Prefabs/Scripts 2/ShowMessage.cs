@@ -74,7 +74,18 @@ public class ShowMessage : MonoBehaviour
 
             }
 
-
+            if (!RedFlowerPickup2 && !isColliding2)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1.0f); // Adjust the radius as needed
+                foreach (Collider2D col in colliders)
+                {
+                    if (col.gameObject.tag == "Pickup2" && Input.GetKeyDown(KeyCode.E))
+                    {
+                        RedFlowerPickup2 = true;
+                        // Handle pickup logic here
+                    }
+                }
+            }
 
         }
 
@@ -100,7 +111,11 @@ public class ShowMessage : MonoBehaviour
 
         if (col.gameObject.tag == "Pickup2") // Object called RedFlower
         {
-            RedFlowerPickup2 = true;
+            // Check if the player presses a key to pick up the RedFlower (e.g., 'E' key)
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                RedFlowerPickup2 = true;
+            }
         }
     }
 }
