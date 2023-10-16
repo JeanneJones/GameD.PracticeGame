@@ -7,7 +7,8 @@ public class ShowMessage : MonoBehaviour
 {
     public TMP_Text textPop; // Reference to the first text object
     public TMP_Text textPop2; // Reference to the second text object
-    public TMP_Text textPopB; // Reference to the "TextPop.b" text object
+    public TMP_Text textPopB; // textpop follow up
+    public TMP_Text textpop2B; // textpop2 follow up
     private bool isColliding1 = false;
     private bool isColliding2 = false;
     private bool candleGiven = false; // Added variable to track candle given
@@ -18,6 +19,7 @@ public class ShowMessage : MonoBehaviour
         textPop.enabled = false;
         textPop2.enabled = false;
         textPopB.enabled = false; // Disable "TextPop.b" at the start
+        textpop2B.enabled = false;
     }
 
     private void Update()
@@ -31,7 +33,7 @@ public class ShowMessage : MonoBehaviour
             if (distance1 < 1.5)
             {
                 textPop.enabled = true;
-                textPop.text = "Oh no, my pumpkin is unlit! Can you help me?";
+                textPop.text = "Oh no, my pumpkin is unlit! Can you help me find my candle? If you do find it, simply press E to grab it.";
             }
             else
             {

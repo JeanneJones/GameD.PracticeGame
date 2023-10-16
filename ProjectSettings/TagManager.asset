@@ -16,9 +16,8 @@ TagManager:
   - Pumpkin
   - TextPopB
   - RedFlower
-  - TextPop.b
-  - PickupHold
   - TextPop2B
+  - Pickup2
   layers:
   - Default
   - TransparentFX

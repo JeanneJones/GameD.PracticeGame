@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 3532557585764410271}
   - component: {fileID: 2845601744912648949}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: CanvasWhisp
   m_TagString: TextPop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh no, my pumpkin is unlit! Can you help me?
+  m_text: 'Oh no, my pumpkin is unlit! Can you help me find my candle?
+
+    If you
+    do find it, simply press E to grab it.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
