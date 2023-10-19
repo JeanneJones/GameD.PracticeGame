@@ -538,11 +538,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2177277012277256056, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.92
+      value: -7.57
       objectReference: {fileID: 0}
     - target: {fileID: 2177277012277256056, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.55
+      value: 1.97
       objectReference: {fileID: 0}
     - target: {fileID: 2177277012277256056, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
       propertyPath: m_LocalPosition.z
@@ -578,7 +578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2229195133753872163, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4238270707874988916, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
       propertyPath: m_Name
@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145806249303253626, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
       propertyPath: m_Constraints
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -605,10 +605,7 @@ PrefabInstance:
       addedObject: {fileID: 1967264862}
     - targetCorrespondingSourceObject: {fileID: 4238270707874988916, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1967264861}
-    - targetCorrespondingSourceObject: {fileID: 4238270707874988916, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1967264860}
+      addedObject: {fileID: 1967264863}
   m_SourcePrefab: {fileID: 100100000, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
 --- !u!1 &292292810
 GameObject:
@@ -4748,49 +4745,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2177277012277256056, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
   m_PrefabInstance: {fileID: 290878938}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1967264860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967264854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9117653835b354259a0c03ce702840f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textToDisplay: Squeak
-  backgroundColor: {r: 0.44313726, g: 0.5176471, b: 0.57254905, a: 1}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  targetObject: {fileID: 627181072}
-  disappearMode: 0
-  timeToDisappear: 2
-  keyToPress: 13
-  followingText: {fileID: 0}
---- !u!114 &1967264861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967264854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810546aa5348745779a5772744036fd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions:
-  - {fileID: 1967264860}
-  useCustomActions: 0
-  customActions:
-    m_PersistentCalls:
-      m_Calls: []
-  happenOnlyOnce: 0
-  filterByTag: 0
-  filterTag: Player
-  frequency: 1
-  eventType: 0
 --- !u!61 &1967264862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4826,7 +4780,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.37006497, y: 0.5249874}
     oldSize: {x: 5.3333335, y: 5.3333335}
     newSize: {x: 5.3333335, y: 5.3333335}
     adaptiveTilingThreshold: 0.5
@@ -4836,6 +4790,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.3333335, y: 5.3333335}
   m_EdgeRadius: 0
+--- !u!114 &1967264863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967264854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0027ecc622a19415e89fe29ca9261170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 0}
+  speed: 1
+  directionChangeInterval: 1
+  keepNearStartingPoint: 1
+  orientToDirection: 0
+  lookAxis: 2
 --- !u!114 &2046544343 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5004258929796146871, guid: 5f0117211b205e24e83e3eda45be0bcd, type: 3}
