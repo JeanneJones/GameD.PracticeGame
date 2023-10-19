@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = .5f;
     private float cloudWidth;
 
     private void Start()
