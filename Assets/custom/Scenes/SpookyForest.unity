@@ -601,11 +601,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4238270707874988916, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 1967264862}
-    - targetCorrespondingSourceObject: {fileID: 4238270707874988916, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1967264863}
   m_SourcePrefab: {fileID: 100100000, guid: 114e8944247abbc418f7ce7e1b66e941, type: 3}
 --- !u!1 &292292810
 GameObject:
@@ -4790,24 +4787,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.3333335, y: 5.3333335}
   m_EdgeRadius: 0
---- !u!114 &1967264863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967264854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0027ecc622a19415e89fe29ca9261170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody2D: {fileID: 0}
-  speed: 1
-  directionChangeInterval: 1
-  keepNearStartingPoint: 1
-  orientToDirection: 0
-  lookAxis: 2
 --- !u!114 &2046544343 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5004258929796146871, guid: 5f0117211b205e24e83e3eda45be0bcd, type: 3}
