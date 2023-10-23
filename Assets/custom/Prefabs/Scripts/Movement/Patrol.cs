@@ -18,10 +18,12 @@ public class Patrol : Physics2DObject
 
 	private Vector2[] newWaypoints;
 	private int currentTargetIndex;
+	private Animator animator; // Reference to the Animator component
 
 	void Start ()
 	{
 		currentTargetIndex = 0;
+		animator = GetComponent <Animator>(); // Get the Animator component
 
 		newWaypoints = new Vector2[waypoints.Length+1];
 		int w = 0;
@@ -41,21 +43,33 @@ public class Patrol : Physics2DObject
 			Utils.SetAxisTowards(lookAxis, transform, ((Vector3)newWaypoints[1] - transform.position).normalized);
 		}
 	}
-	
-	public void FixedUpdate ()
+
+	public void FixedUpdate()
 	{
 		Vector2 currentTarget = newWaypoints[currentTargetIndex];
 
 		rigidbody2D.MovePosition(transform.position + ((Vector3)currentTarget - transform.position).normalized * speed * Time.fixedDeltaTime);
 
-		if(Vector2.Distance(transform.position, currentTarget) <= .1f)
+		if (Vector2.Distance(transform.position, currentTarget) <= .1f)
 		{
 			//new waypoint has been reached
-			currentTargetIndex = (currentTargetIndex<newWaypoints.Length-1) ? currentTargetIndex +1 : 0;
-			if(orientToDirection)
+			currentTargetIndex = (currentTargetIndex < newWaypoints.Length - 1) ? currentTargetIndex + 1 : 0;
+			if (orientToDirection)
 			{
 				currentTarget = newWaypoints[currentTargetIndex];
 				Utils.SetAxisTowards(lookAxis, transform, ((Vector3)currentTarget - transform.position).normalized);
+			}
+		}
+
+		if (animator != null)
+		{
+			if (currentTarget.x > transform.position.x)
+			{
+				animator.SetTrigger("MoveRight"); // Trigger the "MoveRight" animation
+			}
+			else
+			{
+				animator.SetTrigger("MoveLeft"); // Trigger the "MoveLeft" animation
 			}
 		}
 	}
