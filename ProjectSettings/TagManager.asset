@@ -18,6 +18,10 @@ TagManager:
   - RedFlower
   - TextPop2B
   - Pickup2
+  - PickupHold
+  - TextPop.b
+  - TextBat
+  - Bat2
   layers:
   - Default
   - TransparentFX

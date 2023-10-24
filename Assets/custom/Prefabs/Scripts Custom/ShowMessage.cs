@@ -9,9 +9,13 @@ public class ShowMessage : MonoBehaviour
     public TMP_Text textPop2; // Reference to the second text object
     public TMP_Text textPopB; // textpop follow up
     public TMP_Text textpop2B; // textpop2 follow up
+    public TMP_Text TextBat;   //bat text
+
+
     private bool isColliding1 = false;
     private bool isColliding2 = false;
-    private bool candleGiven = false; // Added variable to track candle given
+    private bool isColliding3 = false;
+    private bool candleGiven = false; // track candle given
     private bool RedFlowerPickup2 = false;
 
     private void Start()
@@ -19,8 +23,9 @@ public class ShowMessage : MonoBehaviour
         // Disable the text at the start
         textPop.enabled = false;
         textPop2.enabled = false;
-        textPopB.enabled = false; // Disable "TextPopB" at the start
+        textPopB.enabled = false; 
         textpop2B.enabled = false;
+        TextBat.enabled = false;
     }
 
     private void Update()
@@ -67,11 +72,9 @@ public class ShowMessage : MonoBehaviour
 
             if (RedFlowerPickup2)   // Check if the RedFlower has been picked up
             {
-
                 textPop2.enabled = false;
                 textpop2B.enabled = true;
                 textpop2B.text = "You found one! Thank you. Now I can happily rest";
-
             }
 
             if (!RedFlowerPickup2 && !isColliding2)
@@ -86,10 +89,24 @@ public class ShowMessage : MonoBehaviour
                     }
                 }
             }
-
         }
 
+        if (!isColliding3)
+        {
+            Transform player = transform;
+            Transform Bat2 = TextBat.transform;
+            float distanceBat2 = Vector2.Distance(Bat2.position, player.position);
 
+            if (distanceBat2 < 1.5)
+            {
+                TextBat.enabled = true;
+                TextBat.text = "*Shriek*";
+            }
+            else
+            {
+                TextBat.enabled = false;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -103,6 +120,19 @@ public class ShowMessage : MonoBehaviour
         {
             isColliding2 = true;
         }
+
+
+
+
+        if (col.gameObject.tag == "TextBat")
+        {
+            isColliding3 = true;
+        }
+
+
+
+
+
 
         if (col.gameObject.tag == "Pickup") // Object called candle
         {
