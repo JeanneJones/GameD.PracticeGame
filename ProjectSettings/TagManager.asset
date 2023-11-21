@@ -22,6 +22,7 @@ TagManager:
   - TextPop.b
   - TextBat
   - Bat2
+  - Particles
   layers:
   - Default
   - TransparentFX
